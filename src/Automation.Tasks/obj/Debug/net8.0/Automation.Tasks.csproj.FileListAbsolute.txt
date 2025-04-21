@@ -1,0 +1,17 @@
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Tasks.deps.json
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Tasks.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Tasks.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Abstractions.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Core.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Core.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\bin\Debug\net8.0\Automation.Abstractions.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automati.915102DF.Up2Date
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\refint\Automation.Tasks.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\Automation.Tasks.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Tasks\obj\Debug\net8.0\ref\Automation.Tasks.dll

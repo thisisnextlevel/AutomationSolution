@@ -1,0 +1,5 @@
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Runner.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Runner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Runner.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Runner.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Runner.csproj.CoreCompileInputs.cache

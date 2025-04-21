@@ -1,0 +1,10 @@
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Automation.AppHost.AppHost.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Automation.AppHost.AppHost.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Automation.AppHost.AppHost.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Automation.AppHost.AppHost.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Automation.AppHost.AppHost.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Aspire\references\Automation_Core.ProjectMetadata.g.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Aspire\references\Automation_Engine_CDP.ProjectMetadata.g.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Aspire\references\Automation_Engine_UIAutomation.ProjectMetadata.g.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Aspire\references\Automation_Tasks.ProjectMetadata.g.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.AppHost\Automation.AppHost.AppHost\obj\Debug\net8.0-windows\Aspire\references\_AppHost.ProjectMetadata.g.cs

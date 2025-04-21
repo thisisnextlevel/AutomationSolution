@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4A611BBB-710A-469F-A212-F9EFB660B8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Abstractions", "src\Automation.Abstractions\Automation.Abstractions.csproj", "{D8CC3189-6235-4271-8121-C19742FAD91D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Core", "src\Automation.Core\Automation.Core.csproj", "{737B4425-C0F3-4373-9EC7-67193F4C9739}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automation.Engines", "Automation.Engines", "{AEEA5AC0-F8F9-42EE-AC9C-47FEB937C62C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Engine.CDP", "src\Automation.Engines\Automation.Engine.CDP\Automation.Engine.CDP.csproj", "{B3EC3170-56D3-410B-8D66-DA1954C6561E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Engine.UIAutomation", "src\Automation.Engines\Automation.Engine.UIAutomation\Automation.Engine.UIAutomation.csproj", "{5F55FDD9-70B6-4BB6-96F9-0472607DF857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Tasks", "src\Automation.Tasks\Automation.Tasks.csproj", "{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A6830143-4C5F-42F4-ACB4-52123B9F0175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Runner", "Runner\Automation.Runner.csproj", "{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8CC3189-6235-4271-8121-C19742FAD91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CC3189-6235-4271-8121-C19742FAD91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CC3189-6235-4271-8121-C19742FAD91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CC3189-6235-4271-8121-C19742FAD91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737B4425-C0F3-4373-9EC7-67193F4C9739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737B4425-C0F3-4373-9EC7-67193F4C9739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737B4425-C0F3-4373-9EC7-67193F4C9739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737B4425-C0F3-4373-9EC7-67193F4C9739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EC3170-56D3-410B-8D66-DA1954C6561E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EC3170-56D3-410B-8D66-DA1954C6561E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EC3170-56D3-410B-8D66-DA1954C6561E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EC3170-56D3-410B-8D66-DA1954C6561E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F55FDD9-70B6-4BB6-96F9-0472607DF857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F55FDD9-70B6-4BB6-96F9-0472607DF857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F55FDD9-70B6-4BB6-96F9-0472607DF857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F55FDD9-70B6-4BB6-96F9-0472607DF857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8CC3189-6235-4271-8121-C19742FAD91D} = {4A611BBB-710A-469F-A212-F9EFB660B8A1}
+		{737B4425-C0F3-4373-9EC7-67193F4C9739} = {4A611BBB-710A-469F-A212-F9EFB660B8A1}
+		{AEEA5AC0-F8F9-42EE-AC9C-47FEB937C62C} = {4A611BBB-710A-469F-A212-F9EFB660B8A1}
+		{B3EC3170-56D3-410B-8D66-DA1954C6561E} = {AEEA5AC0-F8F9-42EE-AC9C-47FEB937C62C}
+		{5F55FDD9-70B6-4BB6-96F9-0472607DF857} = {AEEA5AC0-F8F9-42EE-AC9C-47FEB937C62C}
+		{ECB8AF5D-D9B2-4523-B80A-92D9A961DC5F} = {4A611BBB-710A-469F-A212-F9EFB660B8A1}
+		{3D2181AD-4EEB-4BD0-93BB-CBE6063434B4} = {4A611BBB-710A-469F-A212-F9EFB660B8A1}
+	EndGlobalSection
+EndGlobal

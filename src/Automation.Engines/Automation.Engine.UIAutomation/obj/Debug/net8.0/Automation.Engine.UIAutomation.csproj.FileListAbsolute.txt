@@ -1,0 +1,15 @@
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\bin\Debug\net8.0\Automation.Engine.UIAutomation.deps.json
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\bin\Debug\net8.0\Automation.Engine.UIAutomation.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\bin\Debug\net8.0\Automation.Engine.UIAutomation.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\bin\Debug\net8.0\Automation.Abstractions.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\bin\Debug\net8.0\Automation.Abstractions.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automati.5AFA09AA.Up2Date
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\refint\Automation.Engine.UIAutomation.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\Automation.Engine.UIAutomation.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.UIAutomation\obj\Debug\net8.0\ref\Automation.Engine.UIAutomation.dll

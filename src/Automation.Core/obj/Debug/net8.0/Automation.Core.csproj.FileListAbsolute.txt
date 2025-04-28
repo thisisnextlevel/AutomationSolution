@@ -8,6 +8,7 @@ C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automation.Core.AssemblyInfoInputs.cache
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automation.Core.AssemblyInfo.cs
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automation.Core.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automation.Core.sourcelink.json
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automati.3B20AF4C.Up2Date
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\Automation.Core.dll
 C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Core\obj\Debug\net8.0\refint\Automation.Core.dll

@@ -1,0 +1,16 @@
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\bin\Debug\net8.0\Automation.Engine.CDP.deps.json
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\bin\Debug\net8.0\Automation.Engine.CDP.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\bin\Debug\net8.0\Automation.Engine.CDP.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\bin\Debug\net8.0\Automation.Abstractions.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\bin\Debug\net8.0\Automation.Abstractions.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.sourcelink.json
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automati.3962B1F2.Up2Date
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\refint\Automation.Engine.CDP.dll
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\Automation.Engine.CDP.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\src\Automation.Engines\Automation.Engine.CDP\obj\Debug\net8.0\ref\Automation.Engine.CDP.dll

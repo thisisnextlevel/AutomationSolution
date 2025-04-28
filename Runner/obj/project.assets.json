@@ -370,10 +370,7 @@
         },
         "runtime": {
           "bin/placeholder/Automation.Engine.CDP.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
+        }
       },
       "Automation.Engine.UIAutomation/1.0.0": {
         "type": "project",

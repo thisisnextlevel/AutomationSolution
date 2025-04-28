@@ -1,8 +1,3 @@
-C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.csproj.AssemblyReference.cache
-C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.AssemblyInfoInputs.cache
-C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.AssemblyInfo.cs
-C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.csproj.CoreCompileInputs.cache
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Runner.exe
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Runner.deps.json
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Runner.runtimeconfig.json
@@ -36,6 +31,12 @@ C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-window
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Engine.UIAutomation.pdb
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Tasks.pdb
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\bin\Debug\net8.0-windows\Automation.Abstractions.pdb
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.csproj.AssemblyReference.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.AssemblyInfoInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.AssemblyInfo.cs
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.csproj.CoreCompileInputs.cache
+C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.sourcelink.json
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automati.AC941867.Up2Date
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\Automation.Runner.dll
 C:\Users\AntiKali\source\repos\AutomationSolution\Runner\obj\Debug\net8.0-windows\refint\Automation.Runner.dll

@@ -2,7 +2,6 @@
 using PuppeteerSharp;
 using System.Diagnostics;
 using System.Linq;
-using System.Windows.Automation;
 
 namespace Automation.Engines.CDP
 {
@@ -10,7 +9,6 @@ namespace Automation.Engines.CDP
     {
         private IBrowser? _browser;
         private IPage? _page;
-        private AutomationElement? _root;
         private const int DebugPort = 9222;
         private const string ProfilePath = "Profile 1";
 
@@ -41,10 +39,12 @@ namespace Automation.Engines.CDP
                 {
                     Headless = false,
                     Args = new[]
-                    {
-                        $"--remote-debugging-port={DebugPort}",
-                        $"--user-data-dir={ProfilePath}"
-                    }
+    {
+        "--start-maximized",         // open the window maximized
+        "--remote-debugging-port=9222",
+        $"--user-data-dir={ProfilePath}",
+     //   $"--profile-directory={ProfileDirectory}"
+    }
                 });
             }
 

@@ -11,10 +11,12 @@ namespace Automation.Tasks
     public class SendChatGPTMessageTask
     {
         private readonly IAutomationFactory _factory;
+        private readonly AutomationContext _context;
 
-        public SendChatGPTMessageTask(IAutomationFactory factory)
+        public SendChatGPTMessageTask(IAutomationFactory factory, AutomationContext context)
         {
             _factory = factory;
+            _context = context;
         }
 
         /// <summary>
@@ -34,6 +36,8 @@ namespace Automation.Tasks
             // Enter the message and click send
             await engine.EnterTextAsync("textarea", message);
             await engine.ClickElementAsync("button[type='submit']");
+
+            _context.Set("last-message", message);
         }
     }
 }

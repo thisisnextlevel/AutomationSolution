@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Automation.Core;
 using Automation.Tasks;
@@ -30,8 +31,14 @@ namespace Automation.Runner
             // Register the factory (in Runner) that knows about both engines
             services.AddSingleton<IAutomationFactory, AutomationFactory>();
 
+            // Shared context for tasks
+            services.AddSingleton<AutomationContext>();
+
             // Register your tasks
             services.AddTransient<SendChatGPTMessageTask>();
+
+            // Load additional tasks or engines from plugins directory
+            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
             var sp = services.BuildServiceProvider();
 

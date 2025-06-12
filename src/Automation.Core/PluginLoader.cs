@@ -30,6 +30,11 @@ namespace Automation.Core
                 {
                     services.AddTransient(typeof(IAutomationEngine), type);
                 }
+                else if (typeof(IAutomationTask).IsAssignableFrom(type) && !type.IsAbstract && !type.IsInterface)
+                {
+                    services.AddTransient(typeof(IAutomationTask), type);
+                    services.AddTransient(type);
+                }
                 else if (type.Name.EndsWith("Task") && !type.IsAbstract && !type.IsInterface)
                 {
                     services.AddTransient(type);

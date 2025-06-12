@@ -36,20 +36,27 @@ namespace Automation.Runner
 
             // Register your tasks
             services.AddTransient<SendChatGPTMessageTask>();
+            services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
 
             // Load additional tasks or engines from plugins directory
             PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
             var sp = services.BuildServiceProvider();
 
-            // 2) Resolve a logger and your task, then run
             var logger = sp.GetRequiredService<ILogger<Program>>();
-            logger.LogInformation("Starting ChatGPT message task…");
+            logger.LogInformation("Running workflow...");
 
-            var task = sp.GetRequiredService<SendChatGPTMessageTask>();
-            await task.ExecuteAsync("Hello from the refined framework!");
+            var context = sp.GetRequiredService<AutomationContext>();
+            context.Set("message", "Hello from the refined framework!");
+
+            var workflow = new WorkflowEngine(sp, context);
+            await workflow.ExecuteAsync(new[]
+            {
+                new WorkflowStep("send", typeof(SendChatGPTMessageTask), Array.Empty<string>())
+            });
 
             logger.LogInformation("Done.");
         }
     }
 }
+

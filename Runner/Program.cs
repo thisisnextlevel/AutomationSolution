@@ -48,6 +48,9 @@ namespace Automation.Runner
             // Load additional tasks or engines from plugins directory
             PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
+            // Load additional tasks or engines from plugins directory
+            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
+
             var sp = services.BuildServiceProvider();
 
             var logger = sp.GetRequiredService<ILogger<Program>>();

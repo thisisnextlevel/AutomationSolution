@@ -8,7 +8,7 @@ namespace Automation.Tasks
     /// <summary>
     /// A task that sends a message to ChatGPT via the automation engine.
     /// </summary>
-    public class SendChatGPTMessageTask
+    public class SendChatGPTMessageTask : IAutomationTask
     {
         private readonly IAutomationFactory _factory;
 
@@ -20,20 +20,20 @@ namespace Automation.Tasks
         /// <summary>
         /// Executes the task: navigates to ChatGPT, enters a message, and sends it.
         /// </summary>
-        public async Task ExecuteAsync(string message)
+        public async Task ExecuteAsync(AutomationContext context)
         {
-            // Create and initialize the CDP engine
+            var message = context.Get<string>("message") ?? string.Empty;
+
             await using var engine = await _factory.CreateAsync(EngineType.CDP);
 
-            // Navigate to ChatGPT
             await engine.NavigateAsync("https://chat.openai.com/");
 
-            // Wait a moment for page load (or implement a proper wait)
             await Task.Delay(2000);
 
-            // Enter the message and click send
             await engine.EnterTextAsync("textarea", message);
             await engine.ClickElementAsync("button[type='submit']");
+
+            context.Set("last-message", message);
         }
     }
 }

@@ -1,7 +1,7 @@
 .vs/
+.vscode/
+**/bin/
+**/obj/
 *.exe
-*.pdb
-*.dll
 *.dll
 *.pdb
-*.exe

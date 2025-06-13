@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Automation.Core;
 using Automation.Tasks;
@@ -36,20 +37,53 @@ namespace Automation.Runner
 
             // Register your tasks
             services.AddTransient<SendChatGPTMessageTask>();
+            services.AddTransient<WriteFileTask>();
+            services.AddTransient<RunProcessTask>();
+            services.AddTransient<SleepTask>();
+            services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
+            services.AddTransient<IAutomationTask, WriteFileTask>();
+            services.AddTransient<IAutomationTask, RunProcessTask>();
+            services.AddTransient<IAutomationTask, SleepTask>();
+
+            // Load additional tasks or engines from plugins directory
+            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
             // Load additional tasks or engines from plugins directory
             PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
             var sp = services.BuildServiceProvider();
 
-            // 2) Resolve a logger and your task, then run
             var logger = sp.GetRequiredService<ILogger<Program>>();
-            logger.LogInformation("Starting ChatGPT message task…");
+            logger.LogInformation("Running workflow...");
 
-            var task = sp.GetRequiredService<SendChatGPTMessageTask>();
-            await task.ExecuteAsync("Hello from the refined framework!");
+            var context = sp.GetRequiredService<AutomationContext>();
+            context.Set("message", "Hello from the refined framework!");
+            context.Set("file-path", "output.txt");
+            context.Set("file-content", "Automation run at " + DateTime.Now);
+            context.Set("command", "echo Workflow complete");
+            context.Set("sleep-ms", 1000);
+
+            var workflow = new WorkflowEngine(sp, context);
+
+            IEnumerable<WorkflowStep> steps;
+            var wfPath = Path.Combine(AppContext.BaseDirectory, "workflow.json");
+            if (File.Exists(wfPath))
+            {
+                var json = File.ReadAllText(wfPath);
+                steps = WorkflowLoader.FromJson(json);
+            }
+            else
+            {
+                steps = new[]
+                {
+                    new WorkflowStep("send", typeof(SendChatGPTMessageTask), Array.Empty<string>())
+                };
+            }
+
+            await workflow.ExecuteAsync(steps);
 
             logger.LogInformation("Done.");
         }
     }
 }
+

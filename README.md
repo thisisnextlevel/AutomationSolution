@@ -22,8 +22,8 @@ A proof-of-concept framework for automating tasks on a Windows machine. Tasks ar
 
 ### Configuring Chrome
 
-The CDP engine uses Google Chrome for browser automation. By default it will try
-to locate `chrome.exe` in the standard installation directories. You can
+The CDP engine uses Google Chrome for browser automation. It attempts to locate
+the browser automatically on Windows, macOS, and Linux. You can
 override this by setting the `CHROME_EXECUTABLE` environment variable to the
 full path of your Chrome installation, e.g.
 
@@ -31,7 +31,8 @@ full path of your Chrome installation, e.g.
 $env:CHROME_EXECUTABLE="C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
 
-If the variable is not set and Chrome cannot be found, PuppeteerSharp will fall
-back to downloading its own copy under the application's output folder.
+If the variable is not set and Chrome cannot be found, PuppeteerSharp will
+download its own copy under the application's output folder. The lookup is
+handled by the `ChromeFinder` helper used by the CDP engine.
 
 > **Note:** the repository does not include the .NET SDK. Install the SDK to build or run the project locally.

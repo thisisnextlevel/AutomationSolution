@@ -1,5 +1,6 @@
 ﻿using Automation.Abstractions;
 using PuppeteerSharp;
+using PuppeteerSharp.BrowserData;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;

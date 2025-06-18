@@ -10,9 +10,9 @@ namespace Automation.Engines.CDP
     {
         private IBrowser? _browser;
         private IPage? _page;
-        private const int DebugPort = 9222;
-        private const string ProfilePath = "Profile 1";
-        private readonly string? _chromePath = GetChromeExecutable();
+        private readonly int _debugPort = 9222;
+        private readonly string _profilePath;
+        private string? _chromePath;
 
         private static string? GetChromeExecutable()
         {
@@ -33,13 +33,31 @@ namespace Automation.Engines.CDP
             return null;
         }
 
-        public void LaunchChromeWithDebugging()
+        public CDPAutomationEngine()
         {
+            _chromePath = ChromeFinder.FindChromeExecutable();
+            _profilePath = Environment.GetEnvironmentVariable("CHROME_PROFILE") ?? "Profile 1";
+            if (int.TryParse(Environment.GetEnvironmentVariable("CHROME_DEBUG_PORT"), out var port))
+                _debugPort = port;
+        }
+
+        public async Task LaunchChromeWithDebuggingAsync()
+        {
+            var exe = _chromePath;
+            if (exe is null)
+            {
+                var fetcher = new BrowserFetcher();
+                await fetcher.DownloadAsync(Chrome.DefaultBuildId);
+                exe = fetcher.GetExecutablePath(Chrome.DefaultBuildId);
+                _chromePath = exe;
+            }
+
             var exe = _chromePath ?? "chrome.exe";
             Process.Start(new ProcessStartInfo
             {
                 FileName = exe,
                 Arguments = $"--remote-debugging-port={DebugPort} --profile-directory=\"{ProfilePath}\"",
+
                 UseShellExecute = true
             });
         }
@@ -51,7 +69,7 @@ namespace Automation.Engines.CDP
                 // Try attach
                 _browser = await Puppeteer.ConnectAsync(new ConnectOptions
                 {
-                    BrowserURL = $"http://localhost:{DebugPort}"
+                    BrowserURL = $"http://localhost:{_debugPort}"
                 });
             }
             catch
@@ -64,9 +82,8 @@ namespace Automation.Engines.CDP
                     Args = new[]
                     {
                         "--start-maximized",         // open the window maximized
-                        "--remote-debugging-port=9222",
-                        $"--user-data-dir={ProfilePath}",
-     //   $"--profile-directory={ProfileDirectory}"
+                        $"--remote-debugging-port={_debugPort}",
+                        $"--user-data-dir={_profilePath}",
                     }
                 });
             }

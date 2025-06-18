@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using System.Reflection;
 using Automation.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +15,12 @@ namespace Automation.Core
         public static void LoadPlugins(IServiceCollection services, string pluginDirectory)
         {
             // register built-in integrations shipped with the framework
-            RegisterTypesFromAssembly(services, typeof(Automation.SemanticKernel.SemanticKernelTask).Assembly);
+            var skPath = Path.Combine(AppContext.BaseDirectory, "Automation.SemanticKernel.dll");
+            if (File.Exists(skPath))
+            {
+                var assembly = Assembly.LoadFrom(skPath);
+                RegisterTypesFromAssembly(services, assembly);
+            }
 
             if (!Directory.Exists(pluginDirectory))
                 return;

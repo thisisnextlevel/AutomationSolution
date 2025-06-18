@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Automation.Abstractions\Automation.Abstractions.csproj" />
-    <ProjectReference Include="..\Automation.Integrations\Automation.SemanticKernel\Automation.SemanticKernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

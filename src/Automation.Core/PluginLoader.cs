@@ -12,6 +12,9 @@ namespace Automation.Core
     {
         public static void LoadPlugins(IServiceCollection services, string pluginDirectory)
         {
+            // register built-in integrations shipped with the framework
+            RegisterTypesFromAssembly(services, typeof(Automation.SemanticKernel.SemanticKernelTask).Assembly);
+
             if (!Directory.Exists(pluginDirectory))
                 return;
 

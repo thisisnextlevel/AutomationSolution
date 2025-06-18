@@ -34,6 +34,7 @@ public static class ServiceCollectionExtensions
         services.AddTransient<RunProcessTask>();
         services.AddTransient<SleepTask>();
         services.AddTransient<DownloadFileTask>();
+        services.AddTransient<HttpGetTask>();
         services.AddTransient<LMStudioTask>();
 
         services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
@@ -41,6 +42,7 @@ public static class ServiceCollectionExtensions
         services.AddTransient<IAutomationTask, RunProcessTask>();
         services.AddTransient<IAutomationTask, SleepTask>();
         services.AddTransient<IAutomationTask, DownloadFileTask>();
+        services.AddTransient<IAutomationTask, HttpGetTask>();
         services.AddTransient<IAutomationTask, LMStudioTask>();
 
         PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));

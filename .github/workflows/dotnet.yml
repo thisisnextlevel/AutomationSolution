@@ -1,0 +1,20 @@
+name: .NET Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore
+        run: dotnet restore AutomationSolution.sln
+      - name: Test
+        run: dotnet test tests/Automation.Tests/Automation.Tests.csproj --verbosity normal

@@ -1,10 +1,9 @@
-﻿using Automation.Abstractions;
+using Automation.Abstractions;
 using Automation.Core;
 using Automation.Engines.CDP;
-using Automation.Engines.UIAutomation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Automation.Runner
+namespace Automation.ConsoleRunner
 {
     public class AutomationFactory : IAutomationFactory
     {
@@ -16,7 +15,6 @@ namespace Automation.Runner
             IAutomationEngine engine = type switch
             {
                 EngineType.CDP => _sp.GetRequiredService<CDPAutomationEngine>(),
-                EngineType.UIAutomation => _sp.GetRequiredService<UIAutomationEngine>(),
                 _ => throw new ArgumentOutOfRangeException(nameof(type)),
             };
 

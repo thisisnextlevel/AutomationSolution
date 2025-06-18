@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Automation.Core;
+using Automation.Abstractions;
 using Automation.Tasks;
 using Automation.Engines.CDP;
 using Automation.Engines.UIAutomation;

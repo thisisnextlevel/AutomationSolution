@@ -1,7 +1,6 @@
 ﻿using Automation.Abstractions;
-using Automation.Core;
 
-namespace Automation.Core
+namespace Automation.Abstractions
 {
     /// <summary>
     /// Factory that can create and initialize IAutomationEngine instances by type.

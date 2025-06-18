@@ -15,6 +15,7 @@ A proof-of-concept framework for automating tasks on a Windows machine. Tasks ar
   - `SleepTask` – pauses for a configurable time
   - `DownloadFileTask` – downloads a file from a URL
 - Plugin loader for discovering additional tasks or engines from a `plugins` directory
+- Custom tasks must be loaded (for example registered with DI or via the plugin loader) before parsing a workflow so their assemblies are already loaded
 - Workflow definitions can be specified in `workflow.json`
 
 ## Usage

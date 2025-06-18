@@ -52,12 +52,10 @@ namespace Automation.Engines.CDP
                 _chromePath = exe;
             }
 
-            var exe = _chromePath ?? "chrome.exe";
             Process.Start(new ProcessStartInfo
             {
-                FileName = exe,
-                Arguments = $"--remote-debugging-port={DebugPort} --profile-directory=\"{ProfilePath}\"",
-
+                FileName = exe ?? "chrome.exe",
+                Arguments = $"--remote-debugging-port={_debugPort} --profile-directory=\"{_profilePath}\"",
                 UseShellExecute = true
             });
         }

@@ -11,6 +11,10 @@ namespace Automation.Engines.UIAutomation
 
         public Task InitializeAsync()
         {
+            if (!OperatingSystem.IsWindows())
+                throw new PlatformNotSupportedException(
+                    "UIAutomationEngine is only supported on Windows platforms.");
+
             _root = AutomationElement.RootElement;
             if (_root == null)
                 throw new InvalidOperationException("UI Automation RootElement not available.");

@@ -57,12 +57,3 @@ back to downloading its own copy under the application's output folder.
 
 > **Note:** the repository does not include the .NET SDK. Install the SDK to build or run the project locally.
 
-### Running on Linux or macOS
-
-The core libraries and the CDP automation engine target `net8.0` and work on any platform supported by .NET. A minimal cross-platform runner is provided in the **ConsoleRunner** project:
-
-```bash
-dotnet run --project ConsoleRunner
-```
-
-This runner omits Windows specific features such as UI automation but allows executing workflows that rely on the CDP engine and general tasks like `RunProcessTask` or `WriteFileTask`.

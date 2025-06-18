@@ -11,6 +11,7 @@ A proof-of-concept framework for automating tasks on a Windows machine. Tasks ar
   - `WriteFileTask` – writes text to a file
   - `RunProcessTask` – runs a shell command
   - `SleepTask` – pauses for a configurable time
+  - `DownloadFileTask` – downloads a file from a URL
 - Plugin loader for discovering additional tasks or engines from a `plugins` directory
 - Workflow definitions can be specified in `workflow.json`
 
@@ -35,12 +36,7 @@ browser executable:
 - `GOOGLE_CHROME_SHIM`
 - `EDGE_EXECUTABLE`
 
-For example:
-=======
-The CDP engine uses Google Chrome for browser automation. By default it will try
-to locate `chrome.exe` in the standard installation directories. You can
-override this by setting the `CHROME_EXECUTABLE` environment variable to the
-full path of your Chrome installation, e.g.
+For example, you can specify the executable path explicitly:
 
 ```powershell
 $env:CHROME_EXECUTABLE="C:\Program Files\Google\Chrome\Application\chrome.exe"

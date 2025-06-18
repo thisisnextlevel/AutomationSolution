@@ -40,13 +40,12 @@ namespace Automation.Runner
             services.AddTransient<WriteFileTask>();
             services.AddTransient<RunProcessTask>();
             services.AddTransient<SleepTask>();
+            services.AddTransient<DownloadFileTask>();
             services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
             services.AddTransient<IAutomationTask, WriteFileTask>();
             services.AddTransient<IAutomationTask, RunProcessTask>();
             services.AddTransient<IAutomationTask, SleepTask>();
-
-            // Load additional tasks or engines from plugins directory
-            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
+            services.AddTransient<IAutomationTask, DownloadFileTask>();
 
             // Load additional tasks or engines from plugins directory
             PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
@@ -57,6 +56,8 @@ namespace Automation.Runner
             logger.LogInformation("Running workflow...");
 
             var context = sp.GetRequiredService<AutomationContext>();
+            context.Set("download-url", "https://example.com");
+            context.Set("download-path", "download.bin");
             context.Set("message", "Hello from the refined framework!");
             context.Set("file-path", "output.txt");
             context.Set("file-content", "Automation run at " + DateTime.Now);

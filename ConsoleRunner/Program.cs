@@ -31,11 +31,13 @@ namespace Automation.ConsoleRunner
             services.AddTransient<RunProcessTask>();
             services.AddTransient<SleepTask>();
             services.AddTransient<DownloadFileTask>();
+            services.AddTransient<LMStudioTask>();
             services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
             services.AddTransient<IAutomationTask, WriteFileTask>();
             services.AddTransient<IAutomationTask, RunProcessTask>();
             services.AddTransient<IAutomationTask, SleepTask>();
             services.AddTransient<IAutomationTask, DownloadFileTask>();
+            services.AddTransient<IAutomationTask, LMStudioTask>();
 
             PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
 
@@ -51,6 +53,9 @@ namespace Automation.ConsoleRunner
             context.Set("file-content", "Automation run at " + DateTime.Now);
             context.Set("command", "echo Workflow complete");
             context.Set("sleep-ms", 1000);
+            context.Set("lmstudio-endpoint", "http://localhost:1234/v1/chat/completions");
+            context.Set("prompt", "Hello from LM Studio!");
+            context.Set("lmstudio-model", "local-model");
 
             var workflow = new WorkflowEngine(sp, context);
 
@@ -63,7 +68,7 @@ namespace Automation.ConsoleRunner
             }
             else
             {
-                steps = new[] { new WorkflowStep("send", typeof(SendChatGPTMessageTask), Array.Empty<string>()) };
+                steps = new[] { new WorkflowStep("lmstudio", typeof(LMStudioTask), Array.Empty<string>()) };
             }
 
             await workflow.ExecuteAsync(steps);

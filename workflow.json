@@ -2,6 +2,7 @@
   { "Id": "download", "TaskType": "Automation.Tasks.DownloadFileTask", "Dependencies": [], "Priority": 0 },
   { "Id": "write", "TaskType": "Automation.Tasks.WriteFileTask", "Dependencies": ["download"], "Priority": 0 },
   { "Id": "send", "TaskType": "Automation.Tasks.SendChatGPTMessageTask", "Dependencies": ["write"], "Priority": 0 },
-  { "Id": "sleep", "TaskType": "Automation.Tasks.SleepTask", "Dependencies": ["send"], "Priority": 0 },
+  { "Id": "lmstudio", "TaskType": "Automation.Tasks.LMStudioTask", "Dependencies": ["send"], "Priority": 0 },
+  { "Id": "sleep", "TaskType": "Automation.Tasks.SleepTask", "Dependencies": ["lmstudio"], "Priority": 0 },
   { "Id": "cmd", "TaskType": "Automation.Tasks.RunProcessTask", "Dependencies": ["sleep"], "Priority": 0 }
 ]

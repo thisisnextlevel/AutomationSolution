@@ -12,6 +12,7 @@ A proof-of-concept framework for automating tasks on a Windows machine. Tasks ar
   - `RunProcessTask` – runs a shell command
   - `SleepTask` – pauses for a configurable time
   - `DownloadFileTask` – downloads a file from a URL
+  - `LMStudioTask` – sends a prompt to an LM Studio endpoint
 - Plugin loader for discovering additional tasks or engines from a `plugins` directory
 - Workflow definitions can be specified in `workflow.json`
 

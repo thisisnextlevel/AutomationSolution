@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using PuppeteerSharp;
+using PuppeteerSharp.BrowserData;
 
 namespace Automation.Engines.CDP
 {

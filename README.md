@@ -14,6 +14,8 @@ A proof-of-concept framework for automating tasks on a Windows machine. Tasks ar
   - `RunProcessTask` – runs a shell command
   - `SleepTask` – pauses for a configurable time
   - `DownloadFileTask` – downloads a file from a URL
+  - `HttpGetTask` – fetches text from a URL
+  - `HttpPostTask` – sends a POST request and stores the response
 - Plugin loader for discovering additional tasks or engines from a `plugins` directory
 - Custom tasks must be loaded (for example registered with DI or via the plugin loader) before parsing a workflow so their assemblies are already loaded
 - Workflow definitions can be specified in `workflow.json`
@@ -59,10 +61,4 @@ back to downloading its own copy under the application's output folder.
 
 ### Running on Linux or macOS
 
-The core libraries and the CDP automation engine target `net8.0` and work on any platform supported by .NET. A minimal cross-platform runner is provided in the **ConsoleRunner** project:
-
-```bash
-dotnet run --project ConsoleRunner
-```
-
-This runner omits Windows specific features such as UI automation but allows executing workflows that rely on the CDP engine and general tasks like `RunProcessTask` or `WriteFileTask`.
+The core libraries and the CDP automation engine target `net8.0` and work on any platform supported by .NET. When running on non-Windows systems the UI automation engine is unavailable, but other tasks and the CDP engine continue to function.

@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Automation.Core;
-using Automation.Abstractions;
 using Automation.Tasks;
-using Automation.Engines.CDP;
-using Automation.Engines.UIAutomation;
+using Automation.Runtime;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -16,46 +14,10 @@ namespace Automation.Runner
     {
         private static async Task Main(string[] args)
         {
-            // 1) Build the DI container
             var services = new ServiceCollection();
-
-            // Logging—this makes AddConsole() available
-            services.AddLogging(builder =>
-            {
-                builder.AddConsole();
-                builder.SetMinimumLevel(LogLevel.Information);
-            });
-
-            // Register the two engines
-            services.AddTransient<CDPAutomationEngine>();
-            services.AddTransient<UIAutomationEngine>();
-
-            // Register the factory (in Runner) that knows about both engines
-            services.AddSingleton<IAutomationFactory, AutomationFactory>();
-
-            // Shared context for tasks
-            services.AddSingleton<AutomationContext>();
-
-            // Register your tasks
-            services.AddTransient<SendChatGPTMessageTask>();
-            services.AddTransient<WriteFileTask>();
-            services.AddTransient<RunProcessTask>();
-            services.AddTransient<SleepTask>();
-            services.AddTransient<DownloadFileTask>();
-            services.AddTransient<LMStudioTask>();
-
-            services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
-            services.AddTransient<IAutomationTask, WriteFileTask>();
-            services.AddTransient<IAutomationTask, RunProcessTask>();
-            services.AddTransient<IAutomationTask, SleepTask>();
-            services.AddTransient<IAutomationTask, DownloadFileTask>();
-            services.AddTransient<IAutomationTask, LMStudioTask>();
-
-            // Load additional tasks or engines from plugins directory
-            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
+            services.AddAutomation(includeUIAutomation: true);
 
             var sp = services.BuildServiceProvider();
-
             var logger = sp.GetRequiredService<ILogger<Program>>();
             logger.LogInformation("Running workflow...");
 
@@ -82,16 +44,11 @@ namespace Automation.Runner
             }
             else
             {
-                steps = new[]
-                {
-                    new WorkflowStep("lmstudio", typeof(LMStudioTask), Array.Empty<string>())
-                };
+                steps = new[] { new WorkflowStep("lmstudio", typeof(LMStudioTask), Array.Empty<string>()) };
             }
 
             await workflow.ExecuteAsync(steps);
-
             logger.LogInformation("Done.");
         }
     }
 }
-

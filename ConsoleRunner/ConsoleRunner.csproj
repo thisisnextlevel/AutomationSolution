@@ -9,8 +9,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Automation.Core\Automation.Core.csproj" />
-    <ProjectReference Include="..\src\Automation.Engines\Automation.Engine.CDP\Automation.Engine.CDP.csproj" />
-    <ProjectReference Include="..\src\Automation.Tasks\Automation.Tasks.csproj" />
+    <ProjectReference Include="..\src\Automation.Runtime\Automation.Runtime.csproj" />
   </ItemGroup>
 </Project>

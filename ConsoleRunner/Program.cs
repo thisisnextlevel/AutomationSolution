@@ -3,9 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Automation.Core;
-using Automation.Abstractions;
 using Automation.Tasks;
-using Automation.Engines.CDP;
+using Automation.Runtime;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -16,31 +15,7 @@ namespace Automation.ConsoleRunner
         private static async Task Main(string[] args)
         {
             var services = new ServiceCollection();
-
-            services.AddLogging(builder =>
-            {
-                builder.AddConsole();
-                builder.SetMinimumLevel(LogLevel.Information);
-            });
-
-            services.AddTransient<CDPAutomationEngine>();
-            services.AddSingleton<IAutomationFactory, AutomationFactory>();
-            services.AddSingleton<AutomationContext>();
-
-            services.AddTransient<SendChatGPTMessageTask>();
-            services.AddTransient<WriteFileTask>();
-            services.AddTransient<RunProcessTask>();
-            services.AddTransient<SleepTask>();
-            services.AddTransient<DownloadFileTask>();
-            services.AddTransient<LMStudioTask>();
-            services.AddTransient<IAutomationTask, SendChatGPTMessageTask>();
-            services.AddTransient<IAutomationTask, WriteFileTask>();
-            services.AddTransient<IAutomationTask, RunProcessTask>();
-            services.AddTransient<IAutomationTask, SleepTask>();
-            services.AddTransient<IAutomationTask, DownloadFileTask>();
-            services.AddTransient<IAutomationTask, LMStudioTask>();
-
-            PluginLoader.LoadPlugins(services, Path.Combine(AppContext.BaseDirectory, "plugins"));
+            services.AddAutomation();
 
             var sp = services.BuildServiceProvider();
             var logger = sp.GetRequiredService<ILogger<Program>>();

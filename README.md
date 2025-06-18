@@ -2,6 +2,8 @@
 
 A proof-of-concept framework for automating tasks on a Windows machine. Tasks are defined as small classes implementing `IAutomationTask` and executed through a simple workflow engine.
 
+> **Note:** The default `Automation.Runner` project and the `UIAutomationEngine` require Windows. On other platforms they will throw a `PlatformNotSupportedException` during initialization.
+
 ## Features
 
 - `AutomationContext` for sharing data between tasks
